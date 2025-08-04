@@ -1,13 +1,36 @@
-# React + Vite
+# 🥁 Calculadora React - Projeto Interativo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto desenvolvido para criar uma calculadora funcional e estilizada que pode ser usada no navegador. A aplicação permite realizar operações matemáticas básicas com uma interface intuitiva, usando botões clicáveis, com layout responsivo para diferentes dispositivos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
+- React (componentes funcionais e hooks)
+- HTML5 & CSS3 (grid layout para organização dos botões)
+- Manipulação de eventos de clique
+- Estilização responsiva e moderna com CSS Grid e media queries
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# calculadora-react
+## 🖼️ Funcionalidades
+- Display digital para mostrar números e resultados
+- Botões para números de 0 a 9 e operadores (+, -, ×, ÷, =, C)
+- Botão “0” que ocupa duas colunas para melhor usabilidade
+- Botão de igual que ocupa duas linhas para destaque
+- Layout em grid que organiza botões e display de forma clara
+- Feedback visual ao passar o mouse sobre os botões
+- Layout responsivo que adapta o tamanho para dispositivos móveis e desktops
+
+---
+
+## 🎨 Demonstração
+[🔗 Clique aqui para ver o projeto online](https://quote-machine-q4sk.vercel.app/) 
+
+---
+
+## 🧠 Conceitos Praticados
+- Construção de interfaces usando CSS Grid para layout complexo
+- Controle de eventos via React para interação do usuário
+- Uso de estilos responsivos com media queries para melhor experiência
+- Gerenciamento visual com propriedades CSS como sombras, bordas e cores
+- Melhores práticas para usabilidade e acessibilidade básica
