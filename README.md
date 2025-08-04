@@ -1,4 +1,4 @@
-# 🥁 Calculadora React - Projeto Interativo
+#  Calculadora React - Projeto Interativo
 
 Um projeto desenvolvido para criar uma calculadora funcional e estilizada que pode ser usada no navegador. A aplicação permite realizar operações matemáticas básicas com uma interface intuitiva, usando botões clicáveis, com layout responsivo para diferentes dispositivos.
 
