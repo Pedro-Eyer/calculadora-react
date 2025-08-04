@@ -1,42 +1,114 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Corpo com fundo gradiente e centralização */
+body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(145deg, #1e1e2f, #2c2c3c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  outline: none;
+  box-shadow: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Remove marca de foco no root e container */
+#root:focus,
+#root:focus-visible,
+.container:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: inherit !important;
+}
+
+/* Container centralizador com largura máxima */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Calculadora em grid */
+.calculator {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 
+    minmax(100px, auto) /* Display */
+    repeat(5, 80px);    /* 5 linhas de botões */
+  gap: 10px;
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  color: white;
+  width: fit-content;
+}
+
+/* Display ocupa toda a largura */
+.display {
+  grid-column: 1 / -1;
+  background: #222;
+  color: #0f0;
+  font-size: 2rem;
+  padding: 20px;
+  text-align: right;
+  border-radius: 10px;
+  overflow-x: auto;
+  min-height: 60px;
+}
+
+/* Botões com estilo padrão */
+button {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hover nos botões */
+button:hover {
+  background: #555;
+}
+
+/* Botão zero ocupa duas colunas */
+.span-two {
+  grid-column: span 2;
+}
+
+/* Botão igual ocupa 2 linhas e fica na última coluna */
+#equals {
+  grid-column: 4 / 5;
+  grid-row: 4 / 6;
+  height: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+  .calculator {
+    grid-template-rows: 
+      minmax(80px, auto) /* Display */
+      repeat(5, 60px);
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    font-size: 1.2rem;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .display {
+    font-size: 1.5rem;
+    padding: 15px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
